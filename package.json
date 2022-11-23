@@ -1,0 +1,31 @@
+{
+  "name": "user_api",
+  "version": "1.0.0",
+  "description": "sample rest api",
+  "main": "index.js",
+  "scripts": {
+    "start": "ENVIRONMENT=$ENVIRONMENT node index.js",
+    "start:dev": "nodemon index.js",
+    "eslint": "eslint ./",
+    "eslint-fix": "eslint ./ --fix",
+    "build": "webpack",
+    "prod": "node dist/api.bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bhargav Bachina",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^1.8.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
+}
