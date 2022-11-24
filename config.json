@@ -1,0 +1,23 @@
+{
+  "GENERAL": {
+    "puertoServidor": 3000,
+    "rutaLog": "./log",
+    "env": "dev"
+  },
+  "DATABASE": {
+    "user": "sa",
+    "password": "Lotus123",
+    "server": "localhost\\SQLEXPRESS",
+    "database": "oso",
+    "options": {
+      "enableArithAbort": true,
+      "encrypt": false
+    }
+  },
+  "SESION": {
+    "tokenSecret": "ABC1234",
+    "tiempo": 600,
+    "tiempoUnidad": "minutes",
+    "fullTiempo": "48h"
+  }
+}
