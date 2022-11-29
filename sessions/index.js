@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
   res.send(`${views} views for ${req.session.greeting}`);
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8081;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });

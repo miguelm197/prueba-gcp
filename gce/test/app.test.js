@@ -29,7 +29,7 @@ async function getIP(uniqueID) {
     .toString('utf8')
     .trim();
 
-  await pingVMExponential(`http://${externalIP}:8080/`, 1);
+  await pingVMExponential(`http://${externalIP}:8081/`, 1);
 }
 
 describe('spin up gce instance', async function () {
@@ -52,11 +52,11 @@ describe('spin up gce instance', async function () {
       --tags http-server`,
       {cwd: path.join(__dirname, '../../')}
     );
-    cp.execSync(`gcloud compute firewall-rules create default-allow-http-8080-${uniqueID} \
-          --allow tcp:8080 \
+    cp.execSync(`gcloud compute firewall-rules create default-allow-http-8081-${uniqueID} \
+          --allow tcp:8081 \
           --source-ranges 0.0.0.0/0 \
           --target-tags http-server \
-          --description "Allow port 8080 access to http-server"`);
+          --description "Allow port 8081 access to http-server"`);
 
     try {
       const timeOutPromise = new Promise((resolve, reject) => {
@@ -82,8 +82,8 @@ describe('spin up gce instance', async function () {
 
   it('should get the instance', async () => {
     if (testFlag) {
-      console.log(`http://${externalIP}:8080/`);
-      const response = await fetch(`http://${externalIP}:8080/`);
+      console.log(`http://${externalIP}:8081/`);
+      const response = await fetch(`http://${externalIP}:8081/`);
       const body = await response.text();
       expect(body).to.include('Hello, world!');
     }
