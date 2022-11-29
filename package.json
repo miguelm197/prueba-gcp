@@ -1,24 +1,27 @@
 {
-  "name": "lotus_api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "nodejs-getting-started",
+  "private": true,
+  "description": "End to end samples for running Node.js applications on Google Cloud Platform",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.0.0"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-fileupload": "^1.2.1",
-    "express-useragent": "^1.0.15",
-    "google-auth-library": "^7.0.3",
-    "jsonwebtoken": "^8.5.1",
-    "moment": "^2.29.1",
-    "mssql": "^6.3.1",
-    "nodemon": "^2.0.12"
-  }
+  "scripts": {
+    "lint": "eslint '**/*.js'",
+    "fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoogleCloudPlatform/nodejs-getting-started.git"
+  },
+  "author": "Google LLC",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/GoogleCloudPlatform/nodejs-getting-started/issues"
+  },
+  "homepage": "https://github.com/GoogleCloudPlatform/nodejs-getting-started#readme"
 }
