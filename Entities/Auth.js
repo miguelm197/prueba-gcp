@@ -1,6 +1,0 @@
-module.exports.ROLES = {
-  SUPER_ADMINISTRADOR: 1,
-  ADMINISTRADOR: 2,
-  EMPLEADO: 3,
-  CLIENTE: 4,
-};
